@@ -14,13 +14,28 @@ import com.ww7h.common.mvp.interfaces.MvpContract;
  * ================================================
  */
 public abstract class BasePresenter<M extends MvpContract.ModelInterface,
-        V extends MvpContract.ViewInterface<M>> {
+        V extends MvpContract.ViewInterface> {
 
-    protected V viewInterface;
-
+    protected V iView;
+    protected M iModel;
+    protected M[] iModels;
 
     public BasePresenter (V v) {
-        viewInterface = v;
+        iView = v;
+        iModel = createModel();
+        iModels = createModels();
     }
+
+    /**
+     * 创建数据模型
+     * @return 返回数据模型
+     */
+    protected abstract M createModel();
+
+    /**
+     * 创建多个数据模型
+     * @return 返回多个数据模型
+     */
+    protected abstract M[] createModels();
 
 }

@@ -17,7 +17,7 @@ public interface MvpContract {
 
     }
 
-    public interface ViewInterface<M extends ModelInterface> {
+    public interface ViewInterface {
 
 
 

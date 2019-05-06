@@ -25,6 +25,7 @@ public abstract class BaseViewFragment<P extends MvpContract.PresenterInterface>
         extends BaseFragment<BaseViewFragment<P>> {
 
     protected P[] presenters;
+    protected P presenter;
 
     @Override
     protected boolean getDesignPattern() {
@@ -36,6 +37,7 @@ public abstract class BaseViewFragment<P extends MvpContract.PresenterInterface>
     protected View getContentView(@NotNull LayoutInflater inflater, @Nullable ViewGroup container) {
 
         presenters = getPresenters();
+        presenter = getPresenter();
         return inflater.inflate(getResourceId(), container);
     }
 
@@ -43,6 +45,14 @@ public abstract class BaseViewFragment<P extends MvpContract.PresenterInterface>
      * 获取当前视图需要用到的所有的Presenter
      * @return presenters
      */
-    protected abstract P[] getPresenters();
+    protected P[] getPresenters() {
+        return null;
+    }
+
+    /**
+     * 获取当前视图需要用到的的Presenter
+     * @return presenter
+     */
+    protected abstract P getPresenter();
 
 }

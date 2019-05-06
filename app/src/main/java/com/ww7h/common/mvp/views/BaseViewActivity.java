@@ -17,7 +17,8 @@ import com.ww7h.ww.common.bases.activity.BaseActivity;
 public abstract class BaseViewActivity<P extends MvpContract.PresenterInterface>
         extends BaseActivity<BaseViewActivity<P>> {
 
-    protected P[] presenters;
+    protected P[] iPresenters;
+    protected P iPresenter;
 
     @Override
     protected boolean getDesignPattern() {
@@ -29,7 +30,8 @@ public abstract class BaseViewActivity<P extends MvpContract.PresenterInterface>
         super.initContentView();
         setContentView(getContentView());
 
-        presenters = getPresenters();
+        iPresenters = getPresenters();
+        iPresenter = getPresenter();
 
     }
 
@@ -37,6 +39,14 @@ public abstract class BaseViewActivity<P extends MvpContract.PresenterInterface>
      * 获取当前视图需要用到的所有的Presenter
      * @return presenters
      */
-    protected abstract P[] getPresenters();
+    protected P[] getPresenters() {
+        return null;
+    }
+
+    /**
+     * 获取当前视图需要用到的的Presenter
+     * @return presenter
+     */
+    protected abstract P getPresenter();
 
 }
