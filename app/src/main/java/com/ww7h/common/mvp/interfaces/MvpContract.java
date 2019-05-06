@@ -11,7 +11,7 @@ package com.ww7h.common.mvp.interfaces;
  * @author ww  Github地址：https://github.com/ww7hcom
  * ================================================
  */
-public interface MvpInterface {
+public interface MvpContract {
 
     public interface ModelInterface {
 
@@ -24,7 +24,6 @@ public interface MvpInterface {
     }
 
     public interface PresenterInterface {
-
 
 
     }

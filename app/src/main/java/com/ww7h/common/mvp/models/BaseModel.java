@@ -13,5 +13,7 @@ package com.ww7h.common.mvp.models;
  */
 public class BaseModel {
 
+    protected final String TAG = BaseModel.class.getName();
+
 
 }
