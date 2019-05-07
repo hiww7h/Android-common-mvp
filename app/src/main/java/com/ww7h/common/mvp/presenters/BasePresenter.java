@@ -18,12 +18,10 @@ public abstract class BasePresenter<M extends MvpContract.IModel,
 
     protected V iView;
     protected M iModel;
-    protected M[] iModels;
 
     public BasePresenter (V v) {
         iView = v;
         iModel = createModel();
-        iModels = createModels();
     }
 
     /**
@@ -32,10 +30,5 @@ public abstract class BasePresenter<M extends MvpContract.IModel,
      */
     protected abstract M createModel();
 
-    /**
-     * 创建多个数据模型
-     * @return 返回多个数据模型
-     */
-    protected abstract M[] createModels();
 
 }
