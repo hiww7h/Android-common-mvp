@@ -24,7 +24,6 @@ import org.jetbrains.annotations.Nullable;
 public abstract class BaseViewFragment<P extends MvpContract.IPresenter>
         extends BaseFragment<BaseViewFragment<P>> {
 
-    protected P[] presenters;
     protected P presenter;
 
     @Override
@@ -36,17 +35,8 @@ public abstract class BaseViewFragment<P extends MvpContract.IPresenter>
     @Override
     protected View getContentView(@NotNull LayoutInflater inflater, @Nullable ViewGroup container) {
 
-        presenters = getPresenters();
         presenter = getPresenter();
         return inflater.inflate(getResourceId(), container);
-    }
-
-    /**
-     * 获取当前视图需要用到的所有的Presenter
-     * @return presenters
-     */
-    protected P[] getPresenters() {
-        return null;
     }
 
     /**

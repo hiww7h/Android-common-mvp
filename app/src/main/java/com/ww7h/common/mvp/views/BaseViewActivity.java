@@ -17,7 +17,6 @@ import com.ww7h.ww.common.bases.activity.BaseActivity;
 public abstract class BaseViewActivity<P extends MvpContract.IPresenter>
         extends BaseActivity<BaseViewActivity<P>> {
 
-    protected P[] iPresenters;
     protected P iPresenter;
 
     @Override
@@ -30,17 +29,8 @@ public abstract class BaseViewActivity<P extends MvpContract.IPresenter>
         super.initContentView();
         setContentView(getContentView());
 
-        iPresenters = getPresenters();
         iPresenter = getPresenter();
 
-    }
-
-    /**
-     * 获取当前视图需要用到的所有的Presenter
-     * @return presenters
-     */
-    protected P[] getPresenters() {
-        return null;
     }
 
     /**
