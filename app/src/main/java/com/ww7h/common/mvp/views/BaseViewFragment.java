@@ -4,7 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.ww7h.common.mvp.interfaces.MvpContract;
+import com.ww7h.common.mvp.contracts.MvpContract;
 import com.ww7h.ww.common.bases.fragment.BaseFragment;
 
 import org.jetbrains.annotations.NotNull;
@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
  * @author ww  Github地址：https://github.com/ww7hcom
  * ================================================
  */
-public abstract class BaseViewFragment<P extends MvpContract.PresenterInterface>
+public abstract class BaseViewFragment<P extends MvpContract.IPresenter>
         extends BaseFragment<BaseViewFragment<P>> {
 
     protected P[] presenters;

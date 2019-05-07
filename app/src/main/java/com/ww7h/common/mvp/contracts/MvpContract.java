@@ -1,4 +1,4 @@
-package com.ww7h.common.mvp.interfaces;
+package com.ww7h.common.mvp.contracts;
 
 /**
  * ================================================
@@ -13,17 +13,17 @@ package com.ww7h.common.mvp.interfaces;
  */
 public interface MvpContract {
 
-    public interface ModelInterface {
+    public interface IModel {
 
     }
 
-    public interface ViewInterface {
+    public interface IView {
 
 
 
     }
 
-    public interface PresenterInterface {
+    public interface IPresenter {
 
 
     }

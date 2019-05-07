@@ -1,6 +1,6 @@
 package com.ww7h.common.mvp.views;
 
-import com.ww7h.common.mvp.interfaces.MvpContract;
+import com.ww7h.common.mvp.contracts.MvpContract;
 import com.ww7h.ww.common.bases.activity.BaseActivity;
 
 /**
@@ -14,7 +14,7 @@ import com.ww7h.ww.common.bases.activity.BaseActivity;
  * @author ww  Github地址：https://github.com/ww7hcom
  * ================================================
  */
-public abstract class BaseViewActivity<P extends MvpContract.PresenterInterface>
+public abstract class BaseViewActivity<P extends MvpContract.IPresenter>
         extends BaseActivity<BaseViewActivity<P>> {
 
     protected P[] iPresenters;

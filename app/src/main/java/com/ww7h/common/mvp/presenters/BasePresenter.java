@@ -1,6 +1,6 @@
 package com.ww7h.common.mvp.presenters;
 
-import com.ww7h.common.mvp.interfaces.MvpContract;
+import com.ww7h.common.mvp.contracts.MvpContract;
 
 /**
  * ================================================
@@ -13,8 +13,8 @@ import com.ww7h.common.mvp.interfaces.MvpContract;
  * @author ww  Github地址：https://github.com/ww7hcom
  * ================================================
  */
-public abstract class BasePresenter<M extends MvpContract.ModelInterface,
-        V extends MvpContract.ViewInterface> {
+public abstract class BasePresenter<M extends MvpContract.IModel,
+        V extends MvpContract.IView> {
 
     protected V iView;
     protected M iModel;
