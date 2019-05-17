@@ -21,8 +21,8 @@ import org.jetbrains.annotations.Nullable;
  * @author ww  Github地址：https://github.com/ww7hcom
  * ================================================
  */
-public abstract class BaseViewFragment<P extends MvpContract.IPresenter>
-        extends BaseFragment<BaseViewFragment<P>> {
+public abstract class BaseViewFragment<P extends MvpContract.IPresenter, T extends BaseFragment<T>>
+        extends BaseFragment<T> {
 
     protected P presenter;
 

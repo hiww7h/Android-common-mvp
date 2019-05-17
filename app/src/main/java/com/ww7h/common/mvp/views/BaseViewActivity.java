@@ -14,8 +14,8 @@ import com.ww7h.ww.common.bases.activity.BaseActivity;
  * @author ww  Github地址：https://github.com/ww7hcom
  * ================================================
  */
-public abstract class BaseViewActivity<P extends MvpContract.IPresenter>
-        extends BaseActivity<BaseViewActivity<P>> {
+public abstract class BaseViewActivity<P extends MvpContract.IPresenter, T extends BaseActivity<T>>
+        extends BaseActivity<T> {
 
     protected P iPresenter;
 
