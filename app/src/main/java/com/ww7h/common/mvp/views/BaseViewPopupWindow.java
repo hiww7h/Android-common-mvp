@@ -2,7 +2,8 @@ package com.ww7h.common.mvp.views;
 
 import android.content.Context;
 
-import com.ww7h.ww.common.popupwindows.BasePopupWindow;
+import com.ww7h.ww.common.bases.view.popupwindows.BasePopupWindow;
+
 
 /**
  * ================================================
