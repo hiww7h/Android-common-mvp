@@ -36,7 +36,7 @@ public abstract class BaseViewFragment<P extends MvpContract.IPresenter, T exten
     protected View getContentView(@NotNull LayoutInflater inflater, @Nullable ViewGroup container) {
 
         presenter = getPresenter();
-        return inflater.inflate(getResourceId(), container);
+        return inflater.inflate(getResourceId(), container, false);
     }
 
     /**
