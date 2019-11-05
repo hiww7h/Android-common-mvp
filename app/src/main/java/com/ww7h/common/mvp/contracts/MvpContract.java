@@ -1,5 +1,8 @@
 package com.ww7h.common.mvp.contracts;
 
+import android.support.annotation.UiThread;
+import android.support.annotation.WorkerThread;
+
 /**
  * ================================================
  * 描述：
@@ -13,18 +16,19 @@ package com.ww7h.common.mvp.contracts;
  */
 public interface MvpContract {
 
-    public interface IModel {
+    interface IModel {
 
     }
 
-    public interface IView {
+    interface IView {
 
-
+        void runOnUiThread(Runnable runnable);
 
     }
 
-    public interface IPresenter {
+    interface IPresenter {
 
+        void runOnWorkerThread(Runnable runnable);
 
     }
 

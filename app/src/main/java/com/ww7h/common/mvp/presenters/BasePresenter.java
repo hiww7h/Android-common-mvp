@@ -1,6 +1,10 @@
 package com.ww7h.common.mvp.presenters;
 
+import android.os.Handler;
+import android.os.Looper;
+
 import com.ww7h.common.mvp.contracts.MvpContract;
+import com.ww7h.ww.common.threads.ThreadPoolManager;
 
 /**
  * ================================================
@@ -29,6 +33,10 @@ public abstract class BasePresenter<M extends MvpContract.IModel,
      * @return 返回数据模型
      */
     protected abstract M createModel();
+
+    public void runOnWorkerThread(Runnable runnable) {
+        ThreadPoolManager.getInstance().execute(runnable);
+    }
 
 
 }
