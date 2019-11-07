@@ -36,7 +36,11 @@ public abstract class BasePresenter<M extends MvpContract.IModel,
 
     public void runOnWorkerThread(Runnable runnable) {
         ThreadPoolManager.getInstance().execute(runnable);
+
+
     }
+
+
 
 
 }

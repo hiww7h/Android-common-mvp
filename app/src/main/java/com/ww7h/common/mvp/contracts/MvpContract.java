@@ -1,7 +1,7 @@
 package com.ww7h.common.mvp.contracts;
 
-import android.support.annotation.UiThread;
-import android.support.annotation.WorkerThread;
+import androidx.annotation.UiThread;
+import androidx.annotation.WorkerThread;
 
 /**
  * ================================================
