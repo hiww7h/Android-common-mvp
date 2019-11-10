@@ -43,6 +43,13 @@ public abstract class BaseViewFragment<P extends MvpContract.IPresenter, T exten
      * 获取当前视图需要用到的的Presenter
      * @return presenter
      */
-    protected abstract P getPresenter();
+    abstract P getPresenter();
+
+
+    public void runOnUiThread(Runnable runnable) {
+        if (getActivity() != null) {
+            getActivity().runOnUiThread(runnable);
+        }
+    }
 
 }
